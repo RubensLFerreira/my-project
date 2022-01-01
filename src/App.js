@@ -1,5 +1,6 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import HelloWorld from './components/HelloWorld';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <p>Meu primeiro APP</p>
       <p>soma : {sum(2, 6)}</p>
       <img src={url} alt="Minha imagem"/>
+      <HelloWorld />
     </div>
   )
   /*
