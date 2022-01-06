@@ -1,6 +1,8 @@
-function SayMyName() {
+function SayMyName(props) {
     return (
-        <h1>O</h1>
+        <div>
+            <p>Olá {props.name}, Salve!</p>
+        </div>
     )
 }
 
