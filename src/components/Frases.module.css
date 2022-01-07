@@ -1,6 +1,7 @@
 .frasesConteiner {
     background-color: #333;
     border: 1px solid #111;
+    border-radius: 5px;
 }
 
 .frasesContent {
