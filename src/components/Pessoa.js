@@ -8,5 +8,4 @@ function Pessoa({foto, nome, idade, profissao}){
         </div>
     )
 }
-
 export default Pessoa;
