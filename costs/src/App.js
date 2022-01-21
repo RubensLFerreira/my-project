@@ -1,10 +1,10 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { Home } from './components/pages/Home';
-import { Company } from './components/pages/Company';
-import { Contacts } from './components/pages/Contacts';
-import { NewProject } from './components/pages/NewProject';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Home from './components/pages/Home';
+import Contacts from './components/pages/Contacts';
+import Company from './components/pages/Company';
+import NewProject from './components/pages/NewProject';
 
-import { Container } from './components/layout/Container';
+import Container from './components/layout/Container'
 
 function App() {
   return (
@@ -13,16 +13,20 @@ function App() {
         <Link to="/">Home</Link>
         <Link to="/company">Empresa</Link>
         <Link to="/contacts">Contatos</Link>
-        <Link to="/newproject">Novo Projeto</Link>
+        <Link to="/newproject">Novos Projetos</Link>
       </div>
-      <Routes>
+      <Switch>
         <Container customClass="min-height">
-          <Route exact path="/" element={<Home />} /> 
-          <Route path="/company" component={<Company />} />
-          <Route path="/contacts" component={<Contacts />} />
-          <Route path="/newproject" component={<NewProject />} />
+          <Route exact path="/"><Home /></Route>
+          <Route path="/company"><Company /></Route>
+          <Route path="/contacts"><contacts /></Route>
+          <Route path="/newproject"><NewProject /></Route>
         </Container>
-      </Routes>
+        <Route exact path="/" element={<Home/>} />
+          <Route path="/company" element={<Company/>} />
+          <Route path="/contacts" element={<Contacts/>} />
+          <Route path="/newproject" element={<NewProject/>} />
+      </Switch>
       <p>Footer</p>
     </Router>
   );
